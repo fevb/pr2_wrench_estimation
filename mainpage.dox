@@ -1,0 +1,26 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b pr2_wrench_estimation 
+
+     This package estimates the wrenches exerted at the tip of the
+     PR2 arms through two methods.
+
+     The first approach uses the joint efforts
+     as input and propagates them forward using the inverse
+     of the transposed jacobian.
+
+     The second approach takes the joint velocity errors as inputs
+     and propagates the error forward through the jacobian to
+     obtain the error in the twist of the tip of the arm. This
+     error in the twist is a measure of the wrench up to a scale factor.
+
+     Filtered versions of the calculated signals through a Butterworth
+     2nd order LPF are also made available.
+
+     The first method takes the joint efforts from the /joint_states topic,
+     while the second needs to have joint velocity controllers loaded.
+
+
+*/

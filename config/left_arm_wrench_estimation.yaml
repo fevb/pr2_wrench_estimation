@@ -1,0 +1,10 @@
+chain_tip_frame: l_gripper_tool_frame
+chain_root_frame: torso_lift_link
+
+# coefficients for 2nd order butterworth LPF
+filter_coeff_b_effort: [0.0201,    0.0402,    0.0201]
+filter_coeff_a_effort: [1.0000,   -1.5610,    0.6414]
+filter_coeff_b_vel: [0.0201,    0.0402,    0.0201]
+filter_coeff_a_vel: [1.0000,   -1.5610,    0.6414]
+
+loop_frequency: 100

@@ -1,0 +1,1 @@
+rxplot /l_arm_wrench_estimation/filtered_wrench/wrench/force/x /l_arm_wrench_estimation/filtered_wrench/wrench/force/y /l_arm_wrench_estimation/filtered_wrench/wrench/force/z /l_arm_wrench_estimation/filtered_wrench/wrench/torque/x /l_arm_wrench_estimation/filtered_wrench/wrench/torque/y /l_arm_wrench_estimation/filtered_wrench/wrench/torque/z -r 10 -p 10

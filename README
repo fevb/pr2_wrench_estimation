@@ -1,0 +1,32 @@
+
+PR2_wrench_estimation
+
+This ROS node uses the motor efforts in the arm and the error in
+joint velocities to estimate the wrench (force/torque) applied to
+the robot's end effector.
+
+To run it:
+
+ - Compile:
+    rosmake pr2_wrench_estimation
+
+ - Start it:
+    roslaunch pr2_wrench_estimation launch/right_arm_wrench_estimation.launch
+    roslaunch pr2_wrench_estimation launch/left_arm_wrench_estimation.launch
+
+ - Check the scripts/ directory for examples of plotting functions, for example:
+    rosrun pr2_wrench_estimation  plot_r_estimated_wrench.sh
+
+   That shows a realtime graph of the estimated wrench. Pull the arm upwards,
+   and you should see a big swing in the third graph (corresponding to the z
+   coordinate) going up.
+
+ 
+ - Important topics:
+   /r_arm_wrench_estimation/estimated_wrench   <- 6DOF wrench estimation
+   /r_arm_wrench_estimation/filtered_wrench  <- Filtered version of the previous topic
+
+   /r_arm_wrench_estimation/twist_error <- 6DOF indication of the wrench based on joint velocity errors
+   /r_arm_wrench_estimation/filtered_twist_error <- Filtered version of the prev. topic
+
+

@@ -1,0 +1,1 @@
+rxplot /l_arm_wrench_estimation/twist_error/twist/linear/x /l_arm_wrench_estimation/twist_error/twist/linear/y /l_arm_wrench_estimation/twist_error/twist/linear/z /l_arm_wrench_estimation/twist_error/twist/angular/x /l_arm_wrench_estimation/twist_error/twist/angular/y /l_arm_wrench_estimation/twist_error/twist/angular/z -r 10 -p 10

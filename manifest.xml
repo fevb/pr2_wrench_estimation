@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <description brief="pr2_wrench_estimation">
+
+     This package estimates the wrenches exerted at the tip of the 
+     PR2 arms through two methods. 
+
+     The first approach uses the joint efforts 
+     as input and propagates them forward using the inverse
+     of the transposed jacobian.
+
+     The second approach takes the joint velocity errors as inputs 
+     and propagates the error forward through the jacobian to 
+     obtain the error in the twist of the tip of the arm. This
+     error in the twist is a measure of the wrench up to a scale factor.
+
+     Filtered versions of the calculated signals through a Butterworth 
+     2nd order LPF are also made available.
+
+     The first method takes the joint efforts from the /joint_states topic,
+     while the second needs to have joint velocity controllers loaded.
+
+     The configuration of the root and tip links of each arm are in the
+     yaml files located in the config/ directory.
+
+  </description>
+  <author>Francisco Viña, Alexis Maldonado</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pr2_wrench_estimation</url>
+ <export>
+    <cpp cflags="`pkg-config --cflags eigen3`"/>
+  </export>
+
+  <depend package="kdl"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="urdf"/>
+  <depend package="kdl_parser"/>
+  <rosdep name="eigen"/>
+</package>
+
+

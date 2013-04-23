@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="l_arm_wrench_estimation" pkg="pr2_wrench_estimation" type="pr2_wrench_estimation" cwd="node" respawn="false" output="screen">
+    <rosparam command="load" file="$(find pr2_wrench_estimation)/config/left_arm_wrench_estimation.yaml"/>
+    <remap from="l_arm_wrench_estimation/controller_state" to="/l_arm_vel/state"/>
+  </node>
+
+</launch>
